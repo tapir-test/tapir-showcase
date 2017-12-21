@@ -3,8 +3,8 @@
 This showcase illustrates how to write ui regression tests with [tapir](https://www.tapir-test.io).
 
 The showcase is divided into two parts:
-* google.com test
-* wikipedia.org test
+* [Google](google/README.md)
+* [Wikipedia](wikipedia/README.md)
 
 ## Prerequisites
 tapir needs at least a Java 8 JDK.
@@ -24,6 +24,7 @@ The showcase is not intended to cover all tapir features. It just illustrates ho
 * Test [Documentation](https://www.tapir-test.io/docs/extensions/documentation/)
 * Visualization of test results with [Allure](https://www.tapir-test.io/docs/extensions/allure/)
 
+To get a more detailed explanation consult the README of the showcases: [Google](google/README.md), [Wikipedia](wikipedia/README.md).
 
 ## How to run?
 
