@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.bmiag.tapir.showcase</groupId>
+	<artifactId>google-systemtest</artifactId>
+	<name>tapir Google Showcase System test</name>
+	<packaging>war</packaging>
+	<parent>
+		<groupId>de.bmiag.tapir</groupId>
+		<artifactId>tapir-starter-selenium-allure</artifactId>
+		<version>3.0.0-SNAPSHOT</version>
+		<relativePath />
+	</parent>
+
+	<properties>
+		<test.suite.filter>**/GoogleSuggestSystemTest.java</test.suite.filter>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>de.bmiag.tapir.showcase</groupId>
+			<artifactId>google-pages</artifactId>
+			<version>3.0.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+</project>
