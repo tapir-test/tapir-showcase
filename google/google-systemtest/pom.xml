@@ -4,7 +4,6 @@
 	<groupId>de.bmiag.tapir.showcase</groupId>
 	<artifactId>google-systemtest</artifactId>
 	<name>tapir Google Showcase System test</name>
-	<packaging>war</packaging>
 	<parent>
 		<groupId>de.bmiag.tapir</groupId>
 		<artifactId>tapir-starter-selenium-allure</artifactId>
