@@ -9,10 +9,9 @@ import de.bmiag.tapir.showcase.google.pages.page.GooglePage
 import de.bmiag.tapir.showcase.google.systemtest.data.SearchTermExpectation
 import de.bmiag.tapir.showcase.google.systemtest.data.SearchTermProvider
 import org.springframework.beans.factory.annotation.Autowired
-import de.bmiag.tapir.util.extensions.WaitExtensions
 
 @TestClass
-@UseExtension(BrowserInteractionService, WaitExtensions)
+@UseExtension(BrowserInteractionService)
 class GoogleSuggestSystemTest {
 
 	@Autowired
