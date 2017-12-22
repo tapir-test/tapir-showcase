@@ -26,7 +26,6 @@ class GoogleSuggestSystemTest {
 	@Step
 	def void assertSuggestions(@IteratedParameter(providerClass=SearchTermProvider) SearchTermExpectation searchTermExpectation) {
 		googlePage.queryField.text = searchTermExpectation.searchTerm
-		waitForCondition[!googlePage.suggestionList.options.empty]
 		assertThat(googlePage.suggestionList.options.map[text], hasItems(searchTermExpectation.expectedSuggestions))
 	}
 

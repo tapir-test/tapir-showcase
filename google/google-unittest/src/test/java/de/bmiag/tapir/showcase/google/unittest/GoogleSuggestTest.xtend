@@ -19,7 +19,6 @@ class GoogleSuggestTest {
 	def void testSuggestions() {
 		openURL("http://www.google.com/webhp?complete=1&hl=en")
 		googlePage.queryField.text = "Cheese"
-		waitForCondition[!googlePage.suggestionList.options.empty]
 		assertThat(googlePage.suggestionList.options.map[text], hasItems("cheese", "cheesecake"))
 	}
 
