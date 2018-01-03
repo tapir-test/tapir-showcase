@@ -14,4 +14,18 @@
 	<properties>
 		<test.suite.filter>**/WikipediaTestSuite.java</test.suite.filter>
 	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-datasource-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-datasource-csv</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-datasource-resource</artifactId>
+		</dependency>
+	</dependencies>
 </project>

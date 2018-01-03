@@ -1,6 +1,7 @@
 package de.bmiag.tapir.showcase.wikipedia.test
 
 import de.bmiag.tapir.core.annotation.useextension.UseExtension
+import de.bmiag.tapir.datasource.resource.annotations.Resource
 import de.bmiag.tapir.execution.annotations.behaviour.ProceedOnFailure
 import de.bmiag.tapir.execution.annotations.documentation.Description
 import de.bmiag.tapir.execution.annotations.documentation.Title
@@ -11,7 +12,6 @@ import de.bmiag.tapir.selenium.service.BrowserInteractionService
 import de.bmiag.tapir.showcase.wikipedia.page.WikipediaContentPage
 import de.bmiag.tapir.showcase.wikipedia.page.WikipediaMainPage
 import de.bmiag.tapir.showcase.wikipedia.test.data.ContentElementExpectation
-import de.bmiag.tapir.showcase.wikipedia.test.data.ContentTableTestDataProvider
 import de.bmiag.tapir.showcase.wikipedia.test.data.WikipediaContentTableExpectaton
 import org.springframework.beans.factory.annotation.Autowired
 
@@ -28,7 +28,8 @@ class WikipediaContentTableTest {
 	@Autowired
 	WikipediaContentPage contentPage
 	
-	@IteratedParameter(providerClass=ContentTableTestDataProvider, method="testData")
+	@IteratedParameter
+	@Resource("classpath:/de/bmiag/tapir/showcase/wikipedia/test/data/searchTerms.csv")
 	WikipediaContentTableExpectaton wikipediaContentTableExpectaton
 	
 	@Step
