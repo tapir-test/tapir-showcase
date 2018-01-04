@@ -23,9 +23,5 @@
 			<groupId>de.bmiag.tapir</groupId>
 			<artifactId>tapir-datasource-csv</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>de.bmiag.tapir</groupId>
-			<artifactId>tapir-datasource-resource</artifactId>
-		</dependency>
 	</dependencies>
 </project>
