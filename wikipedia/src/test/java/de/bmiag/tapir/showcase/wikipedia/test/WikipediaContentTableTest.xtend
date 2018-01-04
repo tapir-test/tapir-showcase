@@ -38,6 +38,11 @@ class WikipediaContentTableTest {
 	@IteratedParameter
 	WikipediaContentTableExpectaton wikipediaContentTableExpectaton
 	
+	override wikipediaContentTableExpectatonParameter() {
+		val resource = resourceLoader.getResource("classpath:/de/bmiag/tapir/showcase/wikipedia/test/data/searchTerms.csv")
+		dataProvider.getData(WikipediaContentTableExpectaton, resource)
+	}
+	
 	@Step
 	@Title("Visit Wikipedia")
 	def void openWikipediaWebsite() {
@@ -60,11 +65,7 @@ class WikipediaContentTableTest {
 	override assertContentTableEntryContentElementExpectationParameter() {
 		wikipediaContentTableExpectaton.contentElementExpectations
 	}
-	
-	override wikipediaContentTableExpectatonParameter() {
-		val resource = resourceLoader.getResource("classpath:/de/bmiag/tapir/showcase/wikipedia/test/data/searchTerms.csv")
-		dataProvider.getData(WikipediaContentTableExpectaton, resource)
-	}
+
 
 	
 }
