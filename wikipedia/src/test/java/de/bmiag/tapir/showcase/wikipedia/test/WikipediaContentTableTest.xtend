@@ -12,7 +12,7 @@ import de.bmiag.tapir.selenium.service.BrowserInteractionService
 import de.bmiag.tapir.showcase.wikipedia.page.WikipediaContentPage
 import de.bmiag.tapir.showcase.wikipedia.page.WikipediaMainPage
 import de.bmiag.tapir.showcase.wikipedia.test.data.ContentElementExpectation
-import de.bmiag.tapir.showcase.wikipedia.test.data.WikipediaContentTableExpectaton
+import de.bmiag.tapir.showcase.wikipedia.test.data.WikipediaContentTableExpectation
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.core.io.ResourceLoader
 
@@ -36,11 +36,11 @@ class WikipediaContentTableTest {
 	DataProvider dataProvider
 	
 	@IteratedParameter
-	WikipediaContentTableExpectaton wikipediaContentTableExpectaton
+	WikipediaContentTableExpectation wikipediaContentTableExpectation
 	
-	override wikipediaContentTableExpectatonParameter() {
+	override wikipediaContentTableExpectationParameter() {
 		val resource = resourceLoader.getResource("classpath:/de/bmiag/tapir/showcase/wikipedia/test/data/searchTerms.csv")
-		dataProvider.getData(WikipediaContentTableExpectaton, resource)
+		dataProvider.getData(WikipediaContentTableExpectation, resource)
 	}
 	
 	@Step
@@ -51,9 +51,9 @@ class WikipediaContentTableTest {
 	
 	@Step
 	def void searchForContent() {
-		mainPage.header.searchField.text = wikipediaContentTableExpectaton.searchTerm
+		mainPage.header.searchField.text = wikipediaContentTableExpectation.searchTerm
 		mainPage.header.searchButton.click
-		assertThat(contentPage.headline.text, is(wikipediaContentTableExpectaton.searchTerm))
+		assertThat(contentPage.headline.text, is(wikipediaContentTableExpectation.searchTerm))
 	}
 	
 	@Step
@@ -63,7 +63,7 @@ class WikipediaContentTableTest {
 	}
 	
 	override assertContentTableEntryContentElementExpectationParameter() {
-		wikipediaContentTableExpectaton.contentElementExpectations
+		wikipediaContentTableExpectation.contentElementExpectations
 	}
 
 

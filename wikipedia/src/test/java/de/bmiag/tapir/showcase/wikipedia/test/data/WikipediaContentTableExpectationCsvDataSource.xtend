@@ -11,7 +11,7 @@ import org.springframework.core.io.Resource
 import org.springframework.stereotype.Component
 
 @Component
-class WikipediaContentTableExpectatonCsvDataSource implements DataSource<Resource, WikipediaContentTableExpectaton> {
+class WikipediaContentTableExpectationCsvDataSource implements DataSource<Resource, WikipediaContentTableExpectation> {
 
 	@Autowired
 	CSVFormat csvFormat;
@@ -27,7 +27,7 @@ class WikipediaContentTableExpectatonCsvDataSource implements DataSource<Resourc
 		val records = csvFormat.parse(new InputStreamReader(resource.getInputStream())).records
 		val searchTermMap = Multimaps.index(records, [get("SearchTerm")])
 		searchTermMap.asMap.entrySet.map [ entry |
-			WikipediaContentTableExpectaton.build [
+			WikipediaContentTableExpectation.build [
 				searchTerm = entry.key
 				contentElementExpectations = entry.value.map [ csvRecord |
 					ContentElementExpectation.build [

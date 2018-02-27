@@ -7,7 +7,7 @@ import java.util.List
 
 @Immutable
 @CustomLabel
-class WikipediaContentTableExpectaton {
+class WikipediaContentTableExpectation {
 	
 	@LabelPart
 	String searchTerm
