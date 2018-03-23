@@ -1,13 +1,15 @@
 package de.bmiag.tapir.showcase.wikipedia.component.impl
 
+import de.bmiag.tapir.core.annotation.useextension.UseExtension
 import de.bmiag.tapir.selenium.element.AbstractSingleSeleniumElement
 import de.bmiag.tapir.selenium.element.SeleniumElementFactory
 import de.bmiag.tapir.showcase.wikipedia.component.ContentElement
 import de.bmiag.tapir.showcase.wikipedia.component.ContentTable
+import de.bmiag.tapir.util.extensions.WaitExtensions
 import java.util.Collections
 import java.util.List
+import java.util.NoSuchElementException
 import org.openqa.selenium.By
-import org.openqa.selenium.NoSuchElementException
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.config.ConfigurableBeanFactory
 import org.springframework.context.annotation.Scope
@@ -21,6 +23,7 @@ import org.springframework.stereotype.Component
  */
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
+@UseExtension(WaitExtensions)
 class ContentTableImpl extends AbstractSingleSeleniumElement implements ContentTable {
 
 	@Autowired
@@ -35,8 +38,10 @@ class ContentTableImpl extends AbstractSingleSeleniumElement implements ContentT
 	}
 
 	override findSingleElement((ContentElement)=>boolean elementSelectionCriteria) {
-		val elements = findElementsInternal(elementSelectionCriteria, true)
-		val firstLink = elements.head
+		val firstLink = waitForNotNull [
+			val elements = findElementsInternal(elementSelectionCriteria, true)
+			elements.head
+		]
 		if(firstLink !== null) {
 			firstLink
 		} else {

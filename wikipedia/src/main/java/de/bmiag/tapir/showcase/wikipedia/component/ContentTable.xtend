@@ -2,7 +2,7 @@ package de.bmiag.tapir.showcase.wikipedia.component
 
 import de.bmiag.tapir.ui.api.TapirElement
 import java.util.List
-import org.openqa.selenium.NoSuchElementException
+import java.util.NoSuchElementException
 
 /** 
  * Representation of the content table on a content page.

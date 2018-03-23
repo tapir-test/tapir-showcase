@@ -25,7 +25,7 @@ class GoogleSuggestSystemTest {
 	@Step
 	def void assertSuggestions(@IteratedParameter @Resource("classpath:/de/bmiag/tapir/showcase/google/systemtest/data/searchTermExpectations.csv") SearchTermExpectation searchTermExpectation) {
 		googlePage.queryField.text = searchTermExpectation.searchTerm
-		assertThat(googlePage.suggestionList.options.map[text], hasItems(searchTermExpectation.expectedSuggestions))
+		assertThat[googlePage.suggestionList.options.map[text]].contains(searchTermExpectation.expectedSuggestions)
 	}
 
 }

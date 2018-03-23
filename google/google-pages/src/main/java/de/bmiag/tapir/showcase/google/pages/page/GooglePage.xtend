@@ -1,6 +1,5 @@
 package de.bmiag.tapir.showcase.google.pages.page
 
-import de.bmiag.tapir.core.annotation.useextension.UseExtension
 import de.bmiag.tapir.htmlbasic.api.Button
 import de.bmiag.tapir.htmlbasic.api.Label
 import de.bmiag.tapir.htmlbasic.api.TextField
@@ -9,11 +8,9 @@ import de.bmiag.tapir.page.annotation.PageActiveCheck
 import de.bmiag.tapir.selenium.annotation.SeleniumElement
 import de.bmiag.tapir.selenium.service.BrowserInteractionService
 import de.bmiag.tapir.showcase.google.pages.component.Listbox
-import de.bmiag.tapir.util.extensions.TapirAssertions
 import org.springframework.beans.factory.annotation.Autowired
 
 @Page
-@UseExtension(TapirAssertions)
 class GooglePage implements PageActiveCheck {
 
 	@Autowired
@@ -34,5 +31,5 @@ class GooglePage implements PageActiveCheck {
 	override isPageActive() {
 		title.contains("Google")
 	}
-	
+
 }

@@ -18,7 +18,7 @@ class GoogleSuggestTest {
 	def void testSuggestions() {
 		openURL("http://www.google.com/webhp?complete=1&hl=en")
 		googlePage.queryField.text = "Cheese"
-		assertThat(googlePage.suggestionList.options.map[text], hasItems("cheese", "cheesecake"))
+		assertThat[googlePage.suggestionList.options.map[text]].contains("cheese", "cheesecake")
 	}
 
 }

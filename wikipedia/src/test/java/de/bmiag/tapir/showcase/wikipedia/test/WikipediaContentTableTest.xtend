@@ -53,13 +53,13 @@ class WikipediaContentTableTest {
 	def void searchForContent() {
 		mainPage.header.searchField.text = wikipediaContentTableExpectation.searchTerm
 		mainPage.header.searchButton.click
-		assertThat(contentPage.headline.text, is(wikipediaContentTableExpectation.searchTerm))
+		assertThat[contentPage.headline.text].isEqualTo(wikipediaContentTableExpectation.searchTerm)
 	}
 	
 	@Step
 	def void assertContentTableEntry(@IteratedParameter ContentElementExpectation contentElementExpectation) {
 		val contentElement = contentPage.contentTable.findSingleElement[number == contentElementExpectation.number]
-		assertThat(contentElement.headline, is(contentElementExpectation.headline))
+		assertThat[contentElement.headline].isEqualTo(contentElementExpectation.headline)
 	}
 	
 	override assertContentTableEntryContentElementExpectationParameter() {
