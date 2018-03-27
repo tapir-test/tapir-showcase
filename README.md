@@ -11,8 +11,7 @@ tapir needs at least a Java 8 JDK.
 
 You can run the showcase from Eclipse or via [Apache Maven](https://maven.apache.org/).
 
-We advice you to download the latest [Eclipse IDE for Java and DSL Developers](https://www.eclipse.org/downloads/packages/eclipse-ide-java-and-dsl-developers/oxygen2) as it contains all the plugins you need to have a smooth tapir experience.
-Alternatively or additionally, install Apache Maven. tapir needs at least version 3.3.3.
+We advice you to follow the [installation instruction on the tapir website](https://www.tapir-test.io/docs/gettingstarted/installation/).
 
 ## What is covered?
 The showcase is not intended to cover all tapir features. It just illustrates how you can get started. Nevertheless there are some interesting aspects you might investigate further:
