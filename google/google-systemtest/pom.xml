@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.bmiag.tapir.showcase</groupId>
 	<artifactId>google-systemtest</artifactId>
-	<version>3.0.0-SNAPSHOT</version>
+	<version>3.1.0-SNAPSHOT</version>
 	<name>tapir Google Showcase System test</name>
 	<parent>
 		<groupId>de.bmiag.tapir</groupId>
 		<artifactId>tapir-starter-selenium-allure</artifactId>
-		<version>3.1.0-SNAPSHOT</version>
+		<version>3.1.0</version>
 		<relativePath />
 	</parent>
 
@@ -19,7 +19,7 @@
 		<dependency>
 			<groupId>de.bmiag.tapir.showcase</groupId>
 			<artifactId>google-pages</artifactId>
-			<version>3.0.0-SNAPSHOT</version>
+			<version>3.1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>de.bmiag.tapir</groupId>
