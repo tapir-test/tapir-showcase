@@ -3,20 +3,20 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.bmiag.tapir.showcase</groupId>
 	<artifactId>google-unittest</artifactId>
-	<version>3.1.0-SNAPSHOT</version>
+	<version>3.1.1-SNAPSHOT</version>
 	<name>tapir Google Showcase Unit test</name>
 
 	<parent>
 		<groupId>de.bmiag.tapir</groupId>
 		<artifactId>tapir-starter-selenium</artifactId>
-		<version>3.1.0</version>
+		<version>3.1.1</version>
 		<relativePath />
 	</parent>
 	<dependencies>
 		<dependency>
 			<groupId>de.bmiag.tapir.showcase</groupId>
 			<artifactId>google-pages</artifactId>
-			<version>3.1.0-SNAPSHOT</version>
+			<version>3.1.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>

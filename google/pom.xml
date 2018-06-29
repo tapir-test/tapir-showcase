@@ -4,13 +4,13 @@
 	<name>tapir Google Showcase Aggregator</name>
 	<groupId>de.bmiag.tapir.showcase</groupId>
 	<artifactId>google-aggregator</artifactId>
-	<version>3.1.0-SNAPSHOT</version>
+	<version>3.1.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<parent>
 		<groupId>de.bmiag.tapir</groupId>
 		<artifactId>tapir-dependencies</artifactId>
-		<version>3.1.0</version>
+		<version>3.1.1</version>
 		<relativePath />
 	</parent>
 	<modules>
