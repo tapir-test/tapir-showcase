@@ -1,10 +1,10 @@
 package de.bmiag.tapir.showcase.google.unittest
 
 import de.bmiag.tapir.core.annotation.useextension.UseExtension
-import de.bmiag.tapir.junit.annotations.UnitTest
 import de.bmiag.tapir.selenium.service.BrowserInteractionService
 import de.bmiag.tapir.showcase.google.pages.page.GooglePage
-import org.junit.Test
+import de.bmiag.tapir.xunit.annotations.UnitTest
+import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 
 @UnitTest

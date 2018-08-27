@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.bmiag.tapir.showcase</groupId>
@@ -7,9 +8,9 @@
 	<name>tapir Google Showcase Unit test</name>
 
 	<parent>
-		<groupId>de.bmiag.tapir</groupId>
-		<artifactId>tapir-starter-selenium</artifactId>
-		<version>3.1.1</version>
+		<groupId>io.tapirtest</groupId>
+		<artifactId>tapir-extensions-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 	<dependencies>
@@ -18,5 +19,63 @@
 			<artifactId>google-pages</artifactId>
 			<version>3.1.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-selenium</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-page</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-html-basic-impl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-selenium-chrome</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-selenium-firefox</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-selenium-htmlunit</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-selenium-ie</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.tapirtest</groupId>
+			<artifactId>tapir-extensions-junit5</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-junit5</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<argLine>
+						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+					</argLine>
+					<systemProperties>
+						<junit.jupiter.extensions.autodetection.enabled>true</junit.jupiter.extensions.autodetection.enabled>
+						<allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
+					</systemProperties>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
