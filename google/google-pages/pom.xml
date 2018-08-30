@@ -7,9 +7,9 @@
 	<name>tapir Google Showcase Pages</name>
 
 	<parent>
-		<groupId>de.bmiag.tapir</groupId>
-		<artifactId>tapir-starter-module</artifactId>
-		<version>3.2.0</version>
+		<groupId>io.tapirtest</groupId>
+		<artifactId>tapir-extensions-parent</artifactId>
+		<version>1.0.0</version>
 		<relativePath />
 	</parent>
 	<dependencies>

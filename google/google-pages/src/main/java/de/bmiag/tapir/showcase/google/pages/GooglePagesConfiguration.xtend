@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.AutoConfigureOrder
 
 @ModuleConfiguration
 @AutoConfigureOrder(GooglePagesConfiguration.AUTO_CONFIGURE_ORDER)
-public class GooglePagesConfiguration {
+class GooglePagesConfiguration {
 
 	public static final int AUTO_CONFIGURE_ORDER = 0
 }

@@ -6,15 +6,11 @@
 	<version>3.2.0-SNAPSHOT</version>
 	<name>tapir Google Showcase System test</name>
 	<parent>
-		<groupId>de.bmiag.tapir</groupId>
-		<artifactId>tapir-starter-selenium-allure</artifactId>
-		<version>3.2.0</version>
+		<groupId>io.tapirtest</groupId>
+		<artifactId>tapir-extensions-parent</artifactId>
+		<version>1.0.0</version>
 		<relativePath />
 	</parent>
-
-	<properties>
-		<test.suite.filter>**/GoogleSuggestSystemTest.java</test.suite.filter>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>de.bmiag.tapir.showcase</groupId>
@@ -23,11 +19,28 @@
 		</dependency>
 		<dependency>
 			<groupId>de.bmiag.tapir</groupId>
-			<artifactId>tapir-datasource-csv</artifactId>
+			<artifactId>tapir-starter-selenium-execution</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.tapirtest</groupId>
+			<artifactId>tapir-extensions-junit5-execution</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.tapirtest</groupId>
+			<artifactId>tapir-extensions-allure2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-datasource-api</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>de.bmiag.tapir</groupId>
 			<artifactId>tapir-datasource-resource</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.bmiag.tapir</groupId>
+			<artifactId>tapir-datasource-csv</artifactId>
 		</dependency>
 	</dependencies>
 </project>
