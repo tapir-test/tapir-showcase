@@ -6,7 +6,7 @@
 	<version>3.2.0-SNAPSHOT</version>
 	<name>tapir Google Showcase System test</name>
 	<parent>
-		<groupId>io.tapirtest</groupId>
+		<groupId>io.tapir-test</groupId>
 		<artifactId>tapir-extensions-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath />
@@ -22,11 +22,11 @@
 			<artifactId>tapir-starter-selenium-execution</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.tapirtest</groupId>
+			<groupId>io.tapir-test</groupId>
 			<artifactId>tapir-extensions-junit5-execution</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.tapirtest</groupId>
+			<groupId>io.tapir-test</groupId>
 			<artifactId>tapir-extensions-allure2</artifactId>
 			<scope>runtime</scope>
 		</dependency>

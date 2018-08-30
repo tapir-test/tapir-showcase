@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component
 @Component
 class WikipediaActivePageProvider {
 
-	private static final String PAGE_PREFIX = "page-"
+	static final String PAGE_PREFIX = "page-"
 
 	@Autowired
 	WebDriver webDriver

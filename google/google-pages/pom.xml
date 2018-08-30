@@ -7,7 +7,7 @@
 	<name>tapir Google Showcase Pages</name>
 
 	<parent>
-		<groupId>io.tapirtest</groupId>
+		<groupId>io.tapir-test</groupId>
 		<artifactId>tapir-extensions-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath />

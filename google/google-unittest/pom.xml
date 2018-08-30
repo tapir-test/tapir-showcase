@@ -8,7 +8,7 @@
 	<name>tapir Google Showcase Unit test</name>
 
 	<parent>
-		<groupId>io.tapirtest</groupId>
+		<groupId>io.tapir-test</groupId>
 		<artifactId>tapir-extensions-parent</artifactId>
 		<version>1.0.0</version>
 		<relativePath />
@@ -48,7 +48,7 @@
 			<artifactId>tapir-selenium-ie</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.tapirtest</groupId>
+			<groupId>io.tapir-test</groupId>
 			<artifactId>tapir-extensions-junit5</artifactId>
 		</dependency>
 		<dependency>
