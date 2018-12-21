@@ -1,7 +1,6 @@
 package de.bmiag.tapir.showcase.google.pages.page
 
 import de.bmiag.tapir.htmlbasic.api.Button
-import de.bmiag.tapir.htmlbasic.api.Label
 import de.bmiag.tapir.htmlbasic.api.TextField
 import de.bmiag.tapir.page.annotation.Page
 import de.bmiag.tapir.page.annotation.PageActiveCheck
@@ -22,11 +21,8 @@ class GooglePage implements PageActiveCheck {
 	@SeleniumElement(name="btnG")
 	Button searchButton
 
-	@SeleniumElement(className="sbsb_a")
+	@SeleniumElement(className="erkvQe")
 	Listbox suggestionList
-
-	@SeleniumElement(id="resultStats")
-	Label resultStats
 
 	override isPageActive() {
 		title.contains("Google")

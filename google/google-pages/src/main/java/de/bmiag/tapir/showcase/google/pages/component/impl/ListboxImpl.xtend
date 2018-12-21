@@ -26,7 +26,7 @@ class ListboxImpl extends AbstractSingleSeleniumElement implements Listbox {
 	}
 
 	def protected getSuggestionWebElements() {
-		webElement.findElements(By.xpath("//div[@class='sbqs_c']")).filter[!text.empty]
+		webElement.findElements(By.xpath("//li[@class='sbct']")).filter[!text.empty]
 	}
 
 }
