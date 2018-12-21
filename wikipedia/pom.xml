@@ -5,12 +5,25 @@
 	<artifactId>wikipedia-showcase</artifactId>
 	<version>3.2.1-SNAPSHOT</version>
 	<name>tapir Wikipedia Showcase</name>
+	
 	<parent>
-		<groupId>io.tapir-test</groupId>
-		<artifactId>tapir-extensions-parent</artifactId>
-		<version>1.0.2</version>
+		<groupId>de.bmiag.tapir</groupId>
+		<artifactId>tapir-starter-module</artifactId>
+		<version>3.2.1</version>
 		<relativePath />
 	</parent>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.tapir-test</groupId>
+				<artifactId>tapir-extensions-parent</artifactId>
+				<version>1.0.2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 	
 	
 	<dependencies>

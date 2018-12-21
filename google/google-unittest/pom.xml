@@ -8,11 +8,24 @@
 	<name>tapir Google Showcase Unit test</name>
 
 	<parent>
-		<groupId>io.tapir-test</groupId>
-		<artifactId>tapir-extensions-parent</artifactId>
-		<version>1.0.2</version>
+		<groupId>de.bmiag.tapir</groupId>
+		<artifactId>tapir-starter-module</artifactId>
+		<version>3.2.1</version>
 		<relativePath />
 	</parent>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.tapir-test</groupId>
+				<artifactId>tapir-extensions-parent</artifactId>
+				<version>1.0.2</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>de.bmiag.tapir.showcase</groupId>
@@ -34,18 +47,22 @@
 		<dependency>
 			<groupId>de.bmiag.tapir</groupId>
 			<artifactId>tapir-selenium-chrome</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>de.bmiag.tapir</groupId>
 			<artifactId>tapir-selenium-firefox</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>de.bmiag.tapir</groupId>
 			<artifactId>tapir-selenium-htmlunit</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>de.bmiag.tapir</groupId>
 			<artifactId>tapir-selenium-ie</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.tapir-test</groupId>
